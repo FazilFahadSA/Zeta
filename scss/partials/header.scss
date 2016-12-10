@@ -1,5 +1,5 @@
 header {
-    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
@@ -9,11 +9,15 @@ header {
         padding-right: 15px;
         max-width: 930px;
         width: 100%;
+        position: relative;
         @include bp-xlg {
             max-width: 700px;
         }
         @include bp-lg {
             max-width: 580px;
+        }
+        @include bp-md {
+            max-width: 410px;
         }
         input {
             @extend .transition;
@@ -25,12 +29,31 @@ header {
             width: 100%;
             padding-left: 15px;
             border: 1px solid #f3f3f3;
-            padding-right: 15px;
+            padding-right: 45px;
             font-size: 16px;
             &:focus {
-                border: 1px solid #2794f2;
+                border: 1px solid #f3f3f3;
                 box-shadow: 0 7px 17px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
                 outline: 0 none;
+            }
+        }
+        .search-icon {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            top: 0;
+            right: 15px;
+            cursor: pointer;
+            svg {
+                @extend .transform-center;
+                position: relative;
+            }
+            &:hover {
+                svg {
+                    .icon-search {
+                        fill: $icon-hover-color;
+                    }
+                }
             }
         }
     }
@@ -39,11 +62,16 @@ header {
         padding-right: 40px;
         position: absolute;
         right: 0;
+        display: flex;
+        align-items: center;
         @include bp-xlg {
             padding-right: 20px;
         }
-        svg {
+        a {
+            display: flex;
+            align-items: center;
             margin-left: 30px;
+            position: relative;
             @include bp-xlg {
                 margin-left: 20px;
             }
@@ -52,6 +80,45 @@ header {
             }
             &:last-child {
                 margin-left: 30px;
+            }
+            &:hover {
+                svg {
+                    .icon-color {
+                        fill: $icon-hover-color;
+                    }
+                }
+            }
+        }
+        .notify {
+            span {
+                @include border-radius(3px);
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: -10px;
+                right: -15px;
+                background-color: #fff;
+                width: 27px;
+                height: 25px;
+                color: #fff;
+                &::before {
+                    @include border-radius(3px);
+                    content: '2';
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 3px;
+                    right: 3px;
+                    bottom: 3px;
+                    top: 3px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    background-color: #fc4b72;
+                    background-image: linear-gradient(to top, #fc3151 0%, #fc4d75 100%);
+                    background-color: #fff;
+                }
             }
         }
     }

@@ -155,11 +155,25 @@ p {
 }
 
 .icon-color {
+    @extend .transition;
     fill: $icon-default-color;
     fill-rule: evenodd;
 }
 
 .fill-white {
+    @extend .transition;
     fill: #fff;
+    fill-rule: evenodd;
+}
+
+.down-arroa {
+    @extend .transition;
+    fill: #555;
+    fill-rule: evenodd;
+}
+
+.icon-search {
+    @extend .transition;
+    fill: #cdcdd0;
     fill-rule: evenodd;
 }
