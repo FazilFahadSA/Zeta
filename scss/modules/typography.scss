@@ -1,0 +1,65 @@
+
+// definition
+$proximaNova: "proxima-nova",sans-serif;
+
+
+// Base Font Size
+$font-size-base: 18px;
+
+// Heading Font Size
+$font-size-h1: 2.75rem;
+$font-size-h2: 1.75rem;
+$font-size-h3: 1.25rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: $font-size-base;
+$font-size-h6: 0.85rem;
+
+// Border-radius Font Size
+$border-radius-base: 3px;
+
+// Padding
+$padding-base-vertical: 6px;
+$padding-base-horizontal: 12px;
+$padding-base: 15px;
+
+// Line Height
+$line-height-base: 1.4;
+
+// Font weight
+$headings-font-weight: 700;
+$base-font-weight: 300;
+$font-font-weight: 700;
+
+// Small Font Size
+$font-size-small: 0.75rem;
+
+// button
+$btn-font-size: 13px;
+$btn-font-weight: 300;
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $proximaNova;
+  @include margin-all(0);
+}
+h1 {
+  font-size: $font-size-h1;
+}
+h2 {
+  font-size: $font-size-h2;
+}
+h3 {
+  font-size: $font-size-h3;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+}
+h6 {
+  font-size: $font-size-h6;
+}
+small {
+  font-size: $font-size-small;
+}

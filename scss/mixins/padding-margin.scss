@@ -1,0 +1,40 @@
+// padding
+@mixin padding-all($padding) {
+  padding: $padding;
+}
+@mixin padding-left($left) {
+  padding-left: $left;
+}
+@mixin padding-right($right) {
+  padding-right: $right;
+}
+@mixin padding-top($top) {
+  padding-top: $top;
+}
+@mixin padding-bottom($bottom) {
+  padding-bottom: $bottom;
+}
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+
+// margin
+@mixin margin-all($margin) {
+  margin: $margin;
+}
+@mixin margin-left($left) {
+  margin-left: $left;
+}
+@mixin margin-right($right) {
+  margin-right: $right;
+}
+@mixin margin-top($top) {
+  margin-top: $top;
+}
+@mixin margin-bottom($bottom) {
+  margin-bottom: $bottom;
+}
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}

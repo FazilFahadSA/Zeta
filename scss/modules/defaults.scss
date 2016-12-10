@@ -1,0 +1,165 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    @include margin-all(0);
+    font-size: $font-size-base;
+}
+
+a {
+    color: $anchor-color;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    outline: none;
+    text-decoration: none;
+}
+
+.no-padding {
+    @include padding-all(0);
+}
+
+.no-padding-left {
+    @include padding-left(0);
+}
+
+.no-padding-right {
+    @include padding-right(0);
+}
+
+.no-padding-top {
+    @include padding-top(0);
+}
+
+.no-padding-bottom {
+    @include padding-bottom(0);
+}
+
+.no-margin {
+    @include margin-all(0);
+}
+
+.no-margin-left {
+    @include margin-left(0);
+}
+
+.no-margin-right {
+    @include margin-right(0);
+}
+
+.no-margin-top {
+    @include margin-top(0);
+}
+
+.no-margin-bottom {
+    @include margin-bottom(0);
+}
+
+.no-border-radius {
+    @include add-border-radius(0, "all");
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.section-control {
+    display: table;
+    @extend .full-width;
+}
+
+.transformX {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.transformY {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.transform-center {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.cover {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transition {
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul,
+p,
+figure {
+    @include padding-left(0);
+    @include margin-all(0);
+}
+
+p {
+    color: $theme-para-color;
+}
+
+.icon-color {
+    fill: $icon-default-color;
+    fill-rule: evenodd;
+}
+
+.fill-white {
+    fill: #fff;
+    fill-rule: evenodd;
+}

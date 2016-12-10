@@ -1,0 +1,20 @@
+$anchor-color: #7e7e7e;
+$icon-default-color: #cbcccf;
+$icon-hover-color: #6a6a6a;
+$theme-para-color: #878787;
+
+@mixin bgColor($color) {
+  background-color: $color;
+}
+@mixin base-font-color($color) {
+  color: $color;
+}
+@mixin heading-font-color($color) {
+  background-color: $color;
+}
+@mixin lead-font-color($color) {
+  background-color: $color;
+}
+@mixin small-font-color($color) {
+  background-color: $color;
+}

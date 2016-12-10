@@ -1,0 +1,58 @@
+header {
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    .search-bar {
+        @extend .margin-center;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 930px;
+        width: 100%;
+        @include bp-xlg {
+            max-width: 700px;
+        }
+        @include bp-lg {
+            max-width: 580px;
+        }
+        input {
+            @extend .transition;
+            @include border-radius(5px);
+            background-color: #f3f3f3;
+            box-shadow: none;
+            border: none;
+            height: 45px;
+            width: 100%;
+            padding-left: 15px;
+            border: 1px solid #f3f3f3;
+            padding-right: 15px;
+            font-size: 16px;
+            &:focus {
+                border: 1px solid #2794f2;
+                box-shadow: 0 7px 17px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+                outline: 0 none;
+            }
+        }
+    }
+    .icon-bar {
+        @extend .transformY;
+        padding-right: 40px;
+        position: absolute;
+        right: 0;
+        @include bp-xlg {
+            padding-right: 20px;
+        }
+        svg {
+            margin-left: 30px;
+            @include bp-xlg {
+                margin-left: 20px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-left: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+// Border shorthand
+
+// common border radius
+@mixin no-border ($border) {
+  border: $border;
+}
+
+// With Condition
+@mixin add-border ($size, $color, $position) {
+  @if $position == "all" {
+    border: $size solid $color;
+  }
+  @else if $position == "top" {
+    border-top: $size solid $color;
+  }
+  @else if $position == "bottom" {
+    border-bottom: $size solid $color;
+  }
+  @else if $position == "left" {
+    border-left: $size solid $color;
+  }
+  @else if $position == "right" {
+    border-right: $size solid $color;
+  }
+  @else if $position == "top-bottom" {
+    border-top: $size solid $color;
+    border-bottom: $size solid $color;
+  }
+  @else if $position == "left-right" {
+    border-left: $size solid $color;
+    border-right: $size solid $color;
+  }
+}
+
+@mixin add-border-radius ($size, $position) {
+  @if $position == "all" {
+    border-radius: $size;
+  }
+  @else if $position == "top-left" {
+    border-radius: $size 0 0 0;
+  }
+  @else if $position == "top-right" {
+    border-radius: 0 $size 0 0;
+  }
+  @else if $position == "bottom-left" {
+    border-radius: 0 0 $size 0;
+  }
+  @else if $position == "bottom-right" {
+    border-radius: 0 0 0 0 $size;
+  }
+}
