@@ -10,6 +10,21 @@
 
 html {
     font-size: 16px;
+    @include bp-lg {
+        font-size: 100%;
+    }
+    @include bp-md {
+        font-size: 85%;
+    }
+    @mixin bp-sm{
+        font-size: 80%;
+    }
+    @include bp-xs {
+        font-size: 75%;
+    }
+    @include bp-xxs {
+        font-size: 60%;
+    }
 }
 
 body {
@@ -154,6 +169,10 @@ p {
     color: $theme-para-color;
 }
 
+h3 {
+    text-transform: uppercase;
+}
+
 .icon-color {
     @extend .transition;
     fill: $icon-default-color;
@@ -176,4 +195,13 @@ p {
     @extend .transition;
     fill: #cdcdd0;
     fill-rule: evenodd;
+}
+
+.reply-icon {
+    fill: #288bf7;
+    fill-rule: evenodd;
+}
+
+.prevent-scroll {
+    overflow: hidden;
 }

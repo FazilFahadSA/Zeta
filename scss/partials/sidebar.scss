@@ -1,11 +1,5 @@
-h3 {
-    text-transform: uppercase;
-}
-
-
-/*aside starts*/
-
 aside {
+    @extend .transition;
     max-width: 300px;
     padding-left: 20px;
     padding-right: 20px;
@@ -23,6 +17,76 @@ aside {
     }
     @include bp-md {
         max-width: 240px;
+    }
+    @include bp-sm {
+        z-index: 9;
+        left: -320px;
+        max-width: 320px;
+        overflow: visible;
+        .toggle-btn {
+            left: 340px;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
+            -o-transition: 0.2s;
+            transition: 0.2s;
+            transition: all 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            display: inline-block;
+            float: left;
+            cursor: pointer;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            width: 30px;
+            height: 20.18181818px;
+            span {
+                position: relative;
+                display: inline-block;
+                float: left;
+                margin-top: 9.09090909px;
+                background-color: #007aff;
+                width: 30px;
+                height: 2px;
+                &:after {
+                    background-color: #007aff;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 30px;
+                    height: 2px;
+                }
+                &:before {
+                    top: -9.09090909px;
+                    background-color: #007aff;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 30px;
+                    height: 2px;
+                }
+                &:after {
+                    top: 9.09090909px;
+                }
+            }
+        }
+        .toggle-btn.active {
+            span {
+                background-color: transparent;
+                &:before {
+                    transform: rotate(-135deg);
+                    top: 0;
+                }
+                &:after {
+                    top: 0;
+                    transform: rotate(135deg);
+                }
+            }
+        }
     }
     .profile-option {
         display: flex;
@@ -96,13 +160,22 @@ aside {
                     -webkit-align-items: center;
                     -ms-flex-align: center;
                     align-items: center;
-                    font-size: 1.25rem;
+                    font-size: 1.3rem;
                     img {
                         @include border-radius(3px);
                         margin-right: 15px;
                     }
                     &:hover {
                         color: #333;
+                    }
+                    .group-icon {
+                        width: 34px;
+                        height: 30px;
+                        margin-right: 10px;
+                        text-align: right;
+                        img {
+                            margin-right: auto;
+                        }
                     }
                 }
             }
@@ -139,6 +212,38 @@ aside {
                     }
                 }
             }
+        }
+    }
+}
+
+// aside {
+//     @mixin bp-sm {
+//         display: none;
+//         left: -300px;
+//         .toggle-btn {
+//             background-color: #007aff;
+//             left: 100%;
+//             span {
+//                 background-color: #FFFFFF;
+//                 &:before {
+//                     background-color: #FFFFFF;
+//                 }
+//                 &:after {
+//                     background-color: #FFFFFF;
+//                 }
+//             }
+//         }
+//     }
+// }
+aside.active {
+    left: 0;
+    background-color: white;
+    .toggle-btn.active {
+        left: 280px;
+    }
+    .profile-option {
+        .porfile-dropdown {
+            width: calc(100% - 114px);
         }
     }
 }

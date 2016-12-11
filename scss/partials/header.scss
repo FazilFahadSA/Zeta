@@ -19,12 +19,14 @@ header {
         @include bp-md {
             max-width: 410px;
         }
+        @include bp-xs {
+            max-width: 340px;
+        }
         input {
             @extend .transition;
             @include border-radius(5px);
             background-color: #f3f3f3;
             box-shadow: none;
-            border: none;
             height: 45px;
             width: 100%;
             padding-left: 15px;
@@ -123,3 +125,4 @@ header {
         }
     }
 }
+
