@@ -1,14 +1,7 @@
 var gulp = require('gulp'),
+    sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
-    sass = require('gulp-ruby-sass'),
     imagemin = require('gulp-imagemin');
-// var jshint = require('gulp-jshint');
-// var changed = require('gulp-changed');
-// var plumber = require('gulp-plumber');
-// var minifyCss = require('gulp-minify-css');
-
-// var SRC = 'js_sep/main.js';
-// var DEST = 'dest';
 
 //Script Task
 
@@ -22,13 +15,11 @@ gulp.task('scripts', function() {
 //Style Task
 
 gulp.task('styles', function() {
-    return
     gulp.src('scss/main.scss')
     .pipe(sass({
         style: 'compressed'
     }))
-    // sass('scss/**/*.scss')
-    .pipe(gulp.dest('build/css/main.css'))
+    .pipe(gulp.dest('build/css'))
 });
 
 
@@ -47,6 +38,7 @@ gulp.task('images', function() {
 //Watches JS
 gulp.task('watch', function() {
     gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('scss/main.scss', ['styles']);
 });
 
 gulp.task('default', ['scripts', 'styles', 'images', 'watch']);

@@ -76,6 +76,9 @@ main {
                     position: absolute;
                     bottom: -23px;
                     right: 40px;
+                    @include bp-md {
+                        right: 25px;
+                    }
                     .icon-circle {
                         @extend .transition;
                         @include border-radius(50%);

@@ -207,13 +207,14 @@ h3 {
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
-  cursor: pointer; }
+  background-attachment: fixed; }
 
 body.active {
+  background-attachment: fixed;
   overflow: hidden; }
 
 header {
@@ -383,7 +384,7 @@ aside {
   position: fixed;
   width: 100%;
   left: 0;
-  height: 100vh !important;
+  height: 100vh;
   overflow-y: scroll; }
   @media only screen and (max-width: 1640px) {
     aside {
@@ -605,7 +606,12 @@ aside.active {
     width: calc(100% - 114px); }
 
 body.active {
-  overflow: hidden !important; }
+  overflow: hidden; }
+  body.active main {
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 100vw; }
 
 /*aside ends*/
 main {
@@ -685,6 +691,9 @@ main {
           position: absolute;
           bottom: -23px;
           right: 40px; }
+          @media only screen and (max-width: 1199px) {
+            main .content-section .container-wrapper .update-status .post-type {
+              right: 25px; } }
           main .content-section .container-wrapper .update-status .post-type .icon-circle {
             border-radius: 50%;
             -webkit-border-radius: 50%;
@@ -1020,5 +1029,3 @@ main {
             @media only screen and (max-width: 640px) {
               main .content-section .container-wrapper .single-post .post-body .write-comments .comments-like {
                 margin-left: 10px; } }
-
-/*# sourceMappingURL=main.css.map */

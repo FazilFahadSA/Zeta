@@ -9,7 +9,7 @@ aside {
     position: fixed;
     width: 100%;
     left: 0;
-    height: 100vh !important;
+    height: 100vh;
     overflow-y: scroll;
     @include bp-xlg {
         max-width: 280px;
@@ -271,7 +271,13 @@ aside.active {
 }
 
 body.active {
-        overflow: hidden !important;
+    overflow: hidden;
+    main {
+        overflow: hidden;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+    }
 }
 
 
