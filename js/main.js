@@ -34,13 +34,7 @@ jQuery(document).ready(function(e) {
 
     function toggleMobile() {
         $(".toggle-btn").click(function() {
-            $(".toggle-btn, aside").toggleClass("active");
-            /* Check panel overlay */
-            // if ($(".panel-overlay").hasClass("active")) {
-            //     $(".panel-overlay").fadeIn();
-            // } else {
-            //     $(".panel-overlay").fadeOut();
-            // }
+            $(".toggle-btn, aside, .body-overlay, body").toggleClass("active");
         });
     }
     toggleMobile();

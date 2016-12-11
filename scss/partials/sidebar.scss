@@ -3,11 +3,13 @@ aside {
     max-width: 300px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 1.875rem;
+    -webkit-box-shadow: 3px 0 0 #f3f3f3;
     box-shadow: 3px 0 0 #f3f3f3;
     position: fixed;
     width: 100%;
     left: 0;
-    height: 100vh;
+    height: 100vh !important;
     overflow-y: scroll;
     @include bp-xlg {
         max-width: 280px;
@@ -19,6 +21,7 @@ aside {
         max-width: 240px;
     }
     @include bp-sm {
+        position: absolute;
         z-index: 9;
         left: -320px;
         max-width: 320px;
@@ -26,8 +29,6 @@ aside {
         .toggle-btn {
             left: 340px;
             -webkit-transition: 0.2s;
-            -moz-transition: 0.2s;
-            -o-transition: 0.2s;
             transition: 0.2s;
             transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
@@ -73,25 +74,42 @@ aside {
                     top: 9.09090909px;
                 }
             }
+            @include bp-xxs {
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
         }
         .toggle-btn.active {
             span {
                 background-color: transparent;
                 &:before {
+                    -webkit-transform: rotate(-135deg);
+                    -ms-transform: rotate(-135deg);
                     transform: rotate(-135deg);
                     top: 0;
                 }
                 &:after {
                     top: 0;
+                    -webkit-transform: rotate(135deg);
+                    -ms-transform: rotate(135deg);
                     transform: rotate(135deg);
                 }
             }
         }
     }
     .profile-option {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
         @include padding-all(20px 0);
+        @include bp-xxs {
+            @include padding-all(7.5px 0);
+        }
         .logo {
             width: 46px;
             height: 46px;
@@ -99,13 +117,23 @@ aside {
             margin-right: 30px;
         }
         .porfile-dropdown {
+            width: -webkit-calc(100% - 74px);
             width: calc(100% - 74px);
             .button-dropdown {
                 position: relative;
                 .dropdown-toggle {
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
                     display: flex;
                     width: 100%;
+                    -webkit-box-pack: justify;
+                    -webkit-justify-content: space-between;
+                    -ms-flex-pack: justify;
                     justify-content: space-between;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
                     align-items: center;
                     font-size: 1.375rem;
                     font-weight: 600;
@@ -120,6 +148,7 @@ aside {
                     background-color: #f3f3f3;
                     left: 0;
                     right: 0;
+                    -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.13);
                     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.13);
                     li {
                         a {
@@ -164,6 +193,9 @@ aside {
                     img {
                         @include border-radius(3px);
                         margin-right: 15px;
+                        @include bp-md {
+                            margin-right: 10px;
+                        }
                     }
                     &:hover {
                         color: #333;
@@ -186,7 +218,13 @@ aside {
     }
     .birthday {
         ul {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center;
             li {
                 margin-bottom: 0;
@@ -216,36 +254,24 @@ aside {
     }
 }
 
-// aside {
-//     @mixin bp-sm {
-//         display: none;
-//         left: -300px;
-//         .toggle-btn {
-//             background-color: #007aff;
-//             left: 100%;
-//             span {
-//                 background-color: #FFFFFF;
-//                 &:before {
-//                     background-color: #FFFFFF;
-//                 }
-//                 &:after {
-//                     background-color: #FFFFFF;
-//                 }
-//             }
-//         }
-//     }
-// }
 aside.active {
     left: 0;
     background-color: white;
+    overflow: scroll;
+    height: 100vh;
     .toggle-btn.active {
         left: 280px;
     }
     .profile-option {
         .porfile-dropdown {
+            width: -webkit-calc(100% - 114px);
             width: calc(100% - 114px);
         }
     }
+}
+
+body.active {
+        overflow: hidden !important;
 }
 
 
