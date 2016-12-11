@@ -1,0 +1,29 @@
+{
+  "name": "zeta",
+  "version": "1.0.0",
+  "description": "Assignment",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FazilFahadSA/Zeta.git"
+  },
+  "keywords": [
+    "Zeta"
+  ],
+  "author": "Fazil Fahath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FazilFahadSA/Zeta/issues"
+  },
+  "homepage": "https://github.com/FazilFahadSA/Zeta#readme"
+}

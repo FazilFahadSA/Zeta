@@ -35,42 +35,10 @@ gulp.task('images', function() {
 
 
 //Watch Task
-//Watches JS
+//Watches Scripts and Styles
 gulp.task('watch', function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/main.scss', ['styles']);
 });
 
 gulp.task('default', ['scripts', 'styles', 'images', 'watch']);
-
-
-
-// gulp.task('changed', function() {
-//     return gulp.src(SRC)
-//         .pipe(plumber())
-//         .pipe(changed(DEST))
-//         .pipe(gulp.dest(DEST));
-// });
-
-// gulp.task('jshint', function() {
-//     gulp.src('js_sep/main.js')
-//         .pipe(plumber())
-//         .pipe(jshint())
-//         .pipe(jshint.reporter('default'));
-// });
-
-// gulp.task('minify-css', function() {
-//     return gulp.src('css_sep/main.css')
-//         .pipe(minifyCss({
-//             keepSpecialComments: 1,
-//             keepBreaks: true
-//         }))
-//         .pipe(gulp.dest('css'))
-// });
-
-// gulp.task('watch', function() {
-//     gulp.watch(SRC, ['changed']);
-// });
-
-
-// gulp.task('default', ['jshint', 'watch']);
