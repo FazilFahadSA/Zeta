@@ -1,19 +1,23 @@
 main {
     width: -webkit-calc(100% - 300px);
+    display: block;
     width: calc(100% - 300px);
     margin-left: 300px;
     @include bp-xlg {
         width: -webkit-calc(100% - 280px);
+        display: block;
         width: calc(100% - 280px);
         margin-left: 280px;
     }
     @include bp-lg {
         width: -webkit-calc(100% - 260px);
+        display: block;
         width: calc(100% - 260px);
         margin-left: 260px;
     }
     @include bp-md {
         width: -webkit-calc(100% - 240px);
+        display: block;
         width: calc(100% - 240px);
         margin-left: 240px;
     }
@@ -350,50 +354,56 @@ main {
                             -ms-flex-wrap: wrap;
                             flex-wrap: wrap;
                         }
-                        input {
-                            @include border-radius(60px);
-                            @extend .transition;
-                            height: 60px;
-                            background-color: #ffffff;
-                            -webkit-box-shadow: none;
-                            box-shadow: none;
-                            border: none;
+                        .textbox-control {
                             width: -webkit-calc(100% - 160px);
+                            display: block;
                             width: calc(100% - 160px);
-                            font-size: 18px;
-                            padding: 20px 60px 20px 20px;
-                            -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-                            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-                            &:focus {
-                                border: transparent;
-                                -webkit-box-shadow: 0 7px 17px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
-                                box-shadow: 0 7px 17px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
-                                outline: 0 none;
-                            }
-                            &::-webkit-input-placeholder {
-                                color: #cecece;
-                            }
-                            @include bp-md {
-                                width: -webkit-calc(100% - 120px);
-                                width: calc(100% - 120px);
+                            input {
+                                @include border-radius(60px);
+                                @extend .transition;
+                                height: 60px;
+                                background-color: #ffffff;
+                                -webkit-box-shadow: none;
+                                box-shadow: none;
+                                border: none;
+                                padding: 20px 60px 20px 20px;
+                                font-size: 18px;
+                                -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                                width: 100%;
+                                max-width: 100%;
+                                &:focus {
+                                    border: transparent;
+                                    -webkit-box-shadow: 0 7px 17px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+                                    box-shadow: 0 7px 17px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+                                    outline: 0 none;
+                                }
+                                &::-webkit-input-placeholder {
+                                    color: #cecece;
+                                }
+                                // @include bp-md {
+                                //     width: -webkit-calc(100% - 120px);
+                                //     display: block;
+                                //     width: calc(100% - 120px);
+                                // }
                             }
                             @include bp-xxs {
                                 width: 100%;
                             }
-                        }
-                        .comment-camera {
-                            @extend .transition;
-                            @extend .transformY;
-                            position: absolute;
-                            right: 180px;
-                            @include bp-xxs {
+                            .comment-camera {
+                                @extend .transition;
+                                @extend .transformY;
                                 position: absolute;
-                                right: 20px;
-                                top: 32px;
-                            }
-                            &:hover {
-                                .icon-color {
-                                    fill: $icon-hover-color;
+                                right: 180px;
+                                @include bp-xxs {
+                                    position: absolute;
+                                    right: 20px;
+                                    top: 32px;
+                                }
+                                &:hover {
+                                    .icon-color {
+                                        fill: $icon-hover-color;
+                                    }
                                 }
                             }
                         }

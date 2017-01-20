@@ -1,0 +1,198 @@
+.no-flexbox {
+    aside {
+        .profile-option {
+            display: table;
+            width: 100%;
+            .logo {
+                float: left;
+                @include bp-lg {
+                    margin-right: 15px;
+                }
+            }
+            .porfile-dropdown {
+                width: 120px;
+                float: left;
+                margin-top: 11px;
+                display: table;
+            }
+        }
+        nav {
+            ul {
+                li {
+                    a {
+                        display: table;
+                        width: 100%;
+                        margin-top: -6px;
+                        font-size: 18px;
+                        .group-icon {
+                            float: left;
+                            img {
+                                margin-top: -6px;
+                                position: relative;
+                            }
+                        }
+                        img {
+                            margin-right: 10px;
+                            position: relative;
+                            top: 6px;
+                        }
+                    }
+                }
+            }
+        }
+        .birthday ul {
+            display: table;
+            width: 100%;
+            li {
+                float: left;
+                a {
+                    margin-top: -5px;
+                }
+                &:nth-child(1) a {
+                    margin-top: 0;
+                }
+                &:nth-child(2) a {
+                    margin-left: -25px;
+                }
+                &:nth-child(3) a {
+                    margin-left: -30px;
+                }
+                &:nth-child(3) a {
+                    margin-left: -35px;
+                }
+            }
+        }
+    }
+    main {
+        .content-section {
+            .container-wrapper {
+                .update-status {
+                    .post-type {
+                        .icon-circle {
+                            display: table;
+                            float: left;
+                            img {
+                                position: relative;
+                                top: 27px;
+                                -webkit-transform: translate(-50%, -50%);
+                                -ms-transform: translate(-50%, -50%);
+                                transform: translate(-50%, -50%);
+                                left: 50%;
+                                @include bp-lg {
+                                    top: 24px;
+                                }
+                                @include bp-xxs {
+                                    top: 16px;
+                                	width: 50%;
+                                }
+                            }
+                            &:nth-child(3) {
+                                background-image: none;
+                                background-color: #31a4fc;
+                                border: none;
+                                filter: none !important;
+                            }
+                        }
+                        .bg-blue-gradient {
+	                        img {
+	                        	@include bp-xxs {
+	                               top: 20px;
+	                            }
+	                        }
+                        }
+                    }
+                }
+                .single-post {
+                    .post-head {
+                        display: table;
+                        width: 100%;
+                        .profile-details {
+                            display: block;
+                            width: 100%;
+                            float: left;
+                            max-width: 450px;
+                            .dp-imgage {
+                                float: left;
+                            }
+                            p {
+                                margin-top: 12px;
+                            }
+                        }
+                        .posted-date {
+                            float: right;
+                            margin-top: 12px;
+                            display: table;
+                        }
+                    }
+                    .post-body {
+                        .comments-share {
+                            display: table;
+                            width: 100%;
+                            .post-share {
+                                display: table;
+                                float: left;
+                                max-width: 560px;
+                                width: 100%;
+                                .social-icon {
+                                    display: table;
+                                    float: left;
+                                    padding-left: 6px;
+                                    padding-top: 6px;
+                                    background-image: none;
+                                    background-color: #31a4fc;
+                                    border: none;
+                                    filter: none !important;
+                                    img {
+                                        padding-left: 5px;
+                                        padding-top: 4px;
+                                    }
+                                }
+                                .love-icon {
+                                    background-image: none;
+                                    background-color: #f7849a;
+                                    border: none;
+                                    filter: none !important;
+                                }
+                                img {
+                                    float: left;
+                                }
+                                p {
+                                    float: left;
+                                    margin-top: 6px;
+                                }
+                            }
+                            .post-comments {
+                                float: right;
+                                margin-top: 4px;
+                            }
+                        }
+                        .write-comments {
+                            display: table;
+                            width: 100%;
+                            input {
+                                float: left;
+                            }
+                            .comment-camera {
+                                top: 32px;
+                            }
+                            .comments-button {
+                                display: table;
+                                float: left;
+                                text-align: center;
+                                img {
+                                    margin-top: 13px;
+                                }
+                            }
+                            .comments-like {
+                                background-image: none;
+                                background-color: #31a4fc;
+                                border: none;
+                                filter: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
