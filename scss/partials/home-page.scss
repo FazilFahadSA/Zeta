@@ -303,9 +303,9 @@ main {
                                 z-index: 1;
                             }
                             img {
-                                @include add-border(2px, #f6f6f6, all);
-                                margin-right: 10px;
-                                margin-left: -8px;
+                                @include add-border(0, #f6f6f6, all);
+                                margin-right: auto;
+                                margin-left: auto;
                                 z-index: 0;
                             }
                             p {
@@ -447,6 +447,9 @@ main {
                             background-image: linear-gradient(to top, #1a83fb 0%, #31a4fc 100%);
                             -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
                             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                            img {
+                                width: 45%;
+                            }
                             @include bp-xxs {
                                 margin-left: 10px;
                             }

@@ -137,7 +137,7 @@ a:active {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.transform-center, header .search-bar .search-icon svg {
+.transform-center, header .search-bar .search-icon img {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -272,10 +272,8 @@ header {
       top: 0;
       right: 15px;
       cursor: pointer; }
-      header .search-bar .search-icon svg {
+      header .search-bar .search-icon img {
         position: relative; }
-      header .search-bar .search-icon:hover svg .icon-search {
-        fill: #6a6a6a; }
   header .icon-bar {
     padding-right: 40px;
     position: absolute;
@@ -315,8 +313,6 @@ header {
         margin-left: 0; }
       header .icon-bar a:last-child {
         margin-left: 30px; }
-      header .icon-bar a:hover svg .icon-color {
-        fill: #6a6a6a; }
     header .icon-bar .notify span {
       border-radius: 3px;
       -webkit-border-radius: 3px;
@@ -902,9 +898,9 @@ main {
               margin-left: -4px;
               z-index: 1; }
             main .content-section .container-wrapper .single-post .post-body .comments-share .post-share img {
-              border: 2px solid #f6f6f6;
-              margin-right: 10px;
-              margin-left: -8px;
+              border: 0 solid #f6f6f6;
+              margin-right: auto;
+              margin-left: auto;
               z-index: 0; }
             main .content-section .container-wrapper .single-post .post-body .comments-share .post-share p span {
               color: #a7abb1; }
@@ -1027,6 +1023,8 @@ main {
             background-image: linear-gradient(to top, #1a83fb 0%, #31a4fc 100%);
             -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+            main .content-section .container-wrapper .single-post .post-body .write-comments .comments-like img {
+              width: 45%; }
             @media only screen and (max-width: 640px) {
               main .content-section .container-wrapper .single-post .post-body .write-comments .comments-like {
                 margin-left: 10px; } }

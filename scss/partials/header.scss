@@ -53,16 +53,9 @@ header {
             top: 0;
             right: 15px;
             cursor: pointer;
-            svg {
+            img {
                 @extend .transform-center;
                 position: relative;
-            }
-            &:hover {
-                svg {
-                    .icon-search {
-                        fill: $icon-hover-color;
-                    }
-                }
             }
         }
     }
@@ -107,13 +100,6 @@ header {
             }
             &:last-child {
                 margin-left: 30px;
-            }
-            &:hover {
-                svg {
-                    .icon-color {
-                        fill: $icon-hover-color;
-                    }
-                }
             }
         }
         .notify {
