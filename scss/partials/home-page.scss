@@ -64,6 +64,17 @@ main {
                         outline: 0 none;
                     }
                 }
+                .placeholder-text {
+                    display: none;
+                    color: #ccc;
+                    font-size: 1.5rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
                 .post-type {
                     display: -webkit-box;
                     display: -webkit-flex;
@@ -278,18 +289,11 @@ main {
                                 width: 36px;
                                 height: 36px;
                                 /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
-                                display: -webkit-box;
-                                display: -webkit-flex;
-                                display: -ms-flexbox;
-                                display: flex;
-                                -webkit-box-pack: center;
-                                -webkit-justify-content: center;
-                                -ms-flex-pack: center;
-                                justify-content: center;
-                                -webkit-box-align: center;
-                                -webkit-align-items: center;
-                                -ms-flex-align: center;
-                                align-items: center;
+                                display: table;
+                                float: left;
+                                img {
+                                    margin-left: 8px;
+                                }
                             }
                             .like-icon {
                                 background-color: #262c37;
@@ -297,6 +301,9 @@ main {
                                 background-image: -webkit-linear-gradient(bottom, #1a83fb 0%, #31a4fc 100%);
                                 background-image: linear-gradient(to top, #1a83fb 0%, #31a4fc 100%);
                                 z-index: 2;
+                                img {
+                                    margin-top: 5px;
+                                }
                             }
                             .love-icon {
                                 background-color: #262c37;
@@ -305,6 +312,9 @@ main {
                                 background-image: linear-gradient(to top, #f1596f 0%, #f7849a 100%);
                                 margin-left: -4px;
                                 z-index: 1;
+                                img {
+                                    margin-top: 9px;
+                                }
                             }
                             img {
                                 @include add-border(0, #f6f6f6, all);

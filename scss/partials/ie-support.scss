@@ -67,23 +67,26 @@
         .content-section {
             .container-wrapper {
                 .update-status {
+                    .placeholder-text {
+                        display: none;
+                    }
+                    &:hover {
+                        .placeholder-text {
+                            display: none;
+                        }
+                    }
                     .post-type {
                         .icon-circle {
                             display: table;
                             float: left;
                             img {
                                 position: relative;
-                                top: 27px;
                                 -webkit-transform: translate(-50%, -50%);
                                 -ms-transform: translate(-50%, -50%);
                                 transform: translate(-50%, -50%);
                                 left: 50%;
-                                @include bp-lg {
-                                    top: 24px;
-                                }
                                 @include bp-xxs {
-                                    top: 16px;
-                                	width: 50%;
+                                    width: 50%;
                                 }
                             }
                             &:nth-child(3) {
@@ -93,12 +96,45 @@
                                 filter: none !important;
                             }
                         }
+                        .icon-circle.icon-camera {
+                            img {
+                                top: 30px;
+                                @include bp-md {
+                                    top: 25px;
+                                }
+                                @include bp-xxs {
+                                    top: 18px;
+                                }
+                            }
+                        }
+                        .icon-circle.icon-video {
+                            img {
+                                top: 27px;
+                                @include bp-md {
+                                    top: 23px;
+                                }
+                                @include bp-xxs {
+                                    top: 16px;
+                                }
+                            }
+                        }
+                        .icon-circle.icon-send {
+                            img {
+                                top: 31px;
+                                @include bp-md {
+                                    top: 26px;
+                                }
+                                @include bp-xxs {
+                                    top: 20px;
+                                }
+                            }
+                        }
                         .bg-blue-gradient {
-	                        img {
-	                        	@include bp-xxs {
-	                               top: 20px;
-	                            }
-	                        }
+                            img {
+                                @include bp-xxs {
+                                    top: 20px;
+                                }
+                            }
                         }
                     }
                 }
@@ -142,10 +178,6 @@
                                     background-color: #31a4fc;
                                     border: none;
                                     filter: none !important;
-                                    img {
-                                        padding-left: 5px;
-                                        padding-top: 4px;
-                                    }
                                 }
                                 .love-icon {
                                     background-image: none;
@@ -179,16 +211,35 @@
                                 display: table;
                                 float: left;
                                 text-align: center;
-                                img {
-                                    margin-top: 13px;
-                                }
                             }
                             .comments-like {
                                 background-image: none;
                                 background-color: #31a4fc;
                                 border: none;
                                 filter: none !important;
+                                img {
+                                    margin-top: 15px;
+                                }
                             }
+                            .comments-reply {
+                                img {
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        header {
+            .icon-bar {
+                .notify {
+                    span {
+                        &:before {
+                            content: '  2';
+                            background-image: none;
+                            background-color: #fc3151;
+                            padding-left: 7px;
                         }
                     }
                 }
@@ -196,3 +247,4 @@
         }
     }
 }
+

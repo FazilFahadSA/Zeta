@@ -124,7 +124,7 @@ header {
                 width: 27px;
                 height: 25px;
                 color: #fff;
-                &::before {
+                &:before {
                     @include border-radius(3px);
                     content: '2';
                     position: absolute;
